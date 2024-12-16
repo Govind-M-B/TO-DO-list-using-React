@@ -1,0 +1,29 @@
+.app {
+  display: grid;
+  grid-template-rows: 150px auto;
+}
+.app_main {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 8%;
+}
+
+.task_column {
+  width: 33.33%;
+  margin: 20px;
+}
+
+/* Add this in your CSS */
+.custom-icon {
+  width: 80px; /* Set the width of the icon */
+  height: 80px; /* Set the height of the icon */
+  color: #ffd700; /* Set the color to gold */
+  transition: all 0.3s ease; /* Optional: add transition for hover effect */
+  position: relative;
+  right: 10px;
+}
+
+.custom-icon:hover {
+  transform: scale(1.5); /* Enlarge on hover */
+  color: #ff8c00; /* Change color on hover */
+}

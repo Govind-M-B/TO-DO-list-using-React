@@ -1,0 +1,104 @@
+.app_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #9b9494;
+}
+
+.app_header > form {
+    width:40%;
+}
+
+.task_input {
+    font-size: 20px;
+    font-weight: 500;
+    background: #f9f9f9;
+    color: black;
+    border: 1px solid #dfe3e6;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.task_input ::placeholder {
+    color: #686868;
+}
+
+.task_form_bottom_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.task_status {
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    padding: 0 5px;
+
+}
+
+/* .task_submit {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #6457f9;
+    color:#fff;
+    border-radius: 5px;
+    height: 40px;
+    padding: 3px 13px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+} */
+
+.task_submit {
+    border: none;
+    padding: 12px 24px; /* Keep padding to adjust the size of the button */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Ensure the text is bold */
+    cursor: pointer; /* Change cursor to pointer when hovering over button */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    background-color: transparent;
+    color: #1fd1f9;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Spacing between letters */
+    position: relative; /* Needed for the pseudo-element positioning */
+    overflow: hidden; 
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task_submit:after {
+    position: absolute;
+    content: " ";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: transform 0.3s ease; /* Animate the transform, but not the size */
+}
+
+.task_submit:hover {
+    background: transparent;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    color: #fff; /* Change text color on hover */
+}
+
+.task_submit:hover:after {
+    transform: scale(1.5) rotate(180deg); /* Only scale and rotate the background */
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
